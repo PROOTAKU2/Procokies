@@ -1,5 +1,7 @@
-# Procokies/__init__.py
+import os
 
 def get_cookie_string():
-    with open("cookies.txt", "r") as f:
+    # Path of cookies.txt inside Procokies folder
+    cookie_path = os.path.join(os.path.dirname(__file__), "cookies.txt")
+    with open(cookie_path, "r") as f:
         return f.read()
